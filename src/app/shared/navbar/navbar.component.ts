@@ -12,13 +12,13 @@ export class NavbarComponent implements OnInit
 
   ngOnInit() { }
 
-  irUsuario(usuario: string)
+  irUsuario(id: string)
   {
-    if (!usuario)
+    if (!id)
     {
       return;
     }
 
-    this.router.navigate(["/usuario", usuario]);
+    this.router.navigate(["/usuario", id]);
   }
 }

@@ -17,6 +17,7 @@ export const initialState: UsuariosState = {
   error: null
 };
 
+
 const UsuariosReducer = createReducer(
   initialState,
   on(UsuariosActions.cargarUsuarios, state => ({ ...state, loading: true })),
@@ -38,7 +39,7 @@ const UsuariosReducer = createReducer(
   })),
 )
 
-export function usuariosReducer(state: UsuariosState = initialState, action: Action)
+export function usuariosReducer(state: UsuariosState, action: Action)
 {
   return UsuariosReducer(state, action);
 }

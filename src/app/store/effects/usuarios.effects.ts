@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import * as UsuariosActions from '../actions/usuarios.actions';
-import { mergeMap, map, catchError } from 'rxjs/operators';
+import { mergeMap, map, catchError, exhaustMap, switchMap} from 'rxjs/operators';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { of } from 'rxjs';
 
